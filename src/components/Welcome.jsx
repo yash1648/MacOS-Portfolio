@@ -25,11 +25,16 @@ const setupTextHover = (container, type) => {
     const letters = container.querySelectorAll("span");
     const { min, max, default: base } = FONT_WEIGHT[type];
 
-    const animateLetters = (letter, weight, duration = 0.25) => {
+    const animateLetters = (letter, intensity, duration = 0.25) => {
+        const weight = min + (max - min) * intensity; // map [0,1] -> [min,max]
+
         return gsap.to(letter, {
             duration,
             ease: "power2.out",
             fontVariationSettings: `'wght' ${weight}`,
+            y: -10 * intensity,
+            scale: 1 + 0.2 * intensity,
+            overwrite: "auto",
         });
     };
 
@@ -41,11 +46,9 @@ const setupTextHover = (container, type) => {
             const { left: l, width: w } = letter.getBoundingClientRect();
             const distance = Math.abs(mouseX - (l - left + w / 2));
 
-            // Shockwave-style: oscillation + decay
             const raw =
                 Math.cos(distance / 25 - index * 0.15) * Math.exp(-distance / 140);
 
-            // Map from [-1, 1] → [0, 1] and clamp
             const intensity = Math.min(1, Math.max(0, (raw + 1) / 2));
 
             animateLetters(letter, intensity);
@@ -57,7 +60,7 @@ const setupTextHover = (container, type) => {
             gsap.to(letter, {
                 duration: 0.4,
                 ease: "power2.out",
-                fontVariationSettings: `'wght' ${min}`,
+                fontVariationSettings: `'wght' ${base}`,
                 y: 0,
                 scale: 1,
                 rotate: 0,
@@ -65,15 +68,16 @@ const setupTextHover = (container, type) => {
         });
     };
 
-    container.addEventListener("mousemove", handleMouseMove)
+    container.addEventListener("mousemove", handleMouseMove);
+    container.addEventListener("mouseleave", handleMouseLeave); // ✅ no ()
 
-    container.addEventListener("mouseleave", handleMouseLeave());
-
-    return ()=>{
+    // cleanup fn
+    return () => {
         container.removeEventListener("mousemove", handleMouseMove);
         container.removeEventListener("mouseleave", handleMouseLeave);
-    }
+    };
 };
+
 
 
 
@@ -83,13 +87,17 @@ function Welcome() {
     const subtitleRef = useRef(null);
 
     useGSAP(() => {
-        const titleCleanUp=setupTextHover(titleRef.current, "title");
-        const subCleanUp=setupTextHover(subtitleRef.current, "subtitle");
-        return ()=>{
-            subCleanUp();
-            titleCleanUp();
-        }
+        const titleCleanUp =
+            titleRef.current && setupTextHover(titleRef.current, "title");
+        const subCleanUp =
+            subtitleRef.current && setupTextHover(subtitleRef.current, "subtitle");
+
+        return () => {
+            titleCleanUp && titleCleanUp();
+            subCleanUp && subCleanUp();
+        };
     }, []);
+
 
 
     return <section id="welcome">
