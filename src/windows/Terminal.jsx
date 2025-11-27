@@ -27,7 +27,7 @@ const Terminal = () => {
                 <ul className="content">
                     {
                         techStack.map(({category,items})=>(
-                    <li key={category} className="flex items-center">
+                    <li key={category} className="flex items-center ">
                         <Check className="check" size={20}/>
                         <h3>{category}</h3>
                         <ul>
@@ -47,7 +47,7 @@ const Terminal = () => {
 
                 <div className="footnote">
                 <p>
-                    <Check size={20}/>5 of 5 stack loaded successfully (100%)
+                    <Check size={20}/>7 of 7 stack loaded successfully (100%)
 
                 </p>
                     <p className="text-black">
