@@ -5,4 +5,5 @@ import Finder from "#windows/Finder";
 import Text from "#windows/Text";
 import Image from "#windows/Image";
 import Contacts from "#windows/Contacts";
-export {Terminal,Safari,Resume,Finder,Text,Image,Contacts};
+import Photo from "#windows/Photo";
+export {Terminal,Safari,Resume,Finder,Text,Image,Contacts,Photo};
