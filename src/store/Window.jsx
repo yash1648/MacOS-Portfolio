@@ -1,14 +1,16 @@
 import {create} from 'zustand';
 import {immer} from "zustand/middleware/immer";
 import {INITIAL_Z_INDEX, WINDOW_CONFIG} from "#constants/index.js";
-
 const useWindowsStore =create(
     immer((set)=>(
         {
+
             windows:WINDOW_CONFIG,
                 nextZIndex:INITIAL_Z_INDEX + 1,
             openWindow:(windowKey,data=null)=> set((state)=>{
+
                 const win=state.windows[windowKey];
+
                 win.isOpen=true;
                 win.zIndex=state.zIndex;
                 win.data=data??win.data;
@@ -16,14 +18,13 @@ const useWindowsStore =create(
             }),
             closeWindow:(windowKey,data=null)=> set((state)=>{
                 const win=state.windows[windowKey];
+
                 win.isOpen=false;
                 win.zIndex=INITIAL_Z_INDEX ;
                 win.data=null
-
             }),
             focusWindow:(windowKey,data=null)=> set((state)=>{
                 const win=state.windows[windowKey];
-
                 win.zIndex=state.nextZIndex++ ;
             }),
         }
