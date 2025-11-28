@@ -69,13 +69,9 @@ function Dock() {
         }else{
             openWindow(app.id)
         }
-
-        console.log(windows)
-
-
     }
 
-    return <section id="dock">
+    return <section id="dock" aria-label="Applications dock">
         <div ref={dockRef} className="dock-container">
             {
                 dockApps.map(({id, name, icon, canOpen}) => (

@@ -21,11 +21,26 @@ export default defineConfig({
        '#store':resolve(dirname(fileURLToPath(import.meta.url)), 'src/store'),
        '#hoc':resolve(dirname(fileURLToPath(import.meta.url)), 'src/hoc'),
        '#windows':resolve(dirname(fileURLToPath(import.meta.url)), 'src/windows'),
-
-
-
      }
   },
-  plugins: [react(),
-    tailwindcss(),],
+  build: {
+    target: 'ES2020',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'gsap': ['gsap'],
+          'react-vendor': ['react', 'react-dom'],
+          'ui-vendor': ['react-tooltip', 'lucide-react'],
+        }
+      }
+    }
+  },
+  plugins: [react(), tailwindcss()],
 })
+

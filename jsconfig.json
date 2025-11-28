@@ -2,10 +2,23 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "#*": ["src/*"]
-    }
+      "#*": ["src/*"],
+      "#components/*": ["src/components/*"],
+      "#windows/*": ["src/windows/*"],
+      "#store/*": ["src/store/*"],
+      "#constants/*": ["src/constants/*"],
+      "#hoc/*": ["src/hoc/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "target": "ES2020"
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
