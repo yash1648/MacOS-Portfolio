@@ -4,4 +4,5 @@ import Dock from "#components/Dock.jsx";
 import WindowControlls from "#components/WindowControlls.jsx";
 import Home from "#components/Home.jsx";
 import ErrorBoundary from "#components/ErrorBoundary.jsx";
-export { Navbar, Welcome, Dock, WindowControlls, Home, ErrorBoundary };
+import ThemeToggle from "#components/ThemeToggle.jsx";
+export { Navbar, Welcome, Dock, WindowControlls, Home, ErrorBoundary, ThemeToggle };

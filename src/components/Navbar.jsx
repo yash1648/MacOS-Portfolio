@@ -2,6 +2,7 @@ import React from 'react'
 import {navIcons, navLinks} from "#constants/index.js";
 import dayjs from "dayjs";
 import useWindowsStore from "#store/Window.jsx";
+import ThemeToggle from './ThemeToggle.jsx';
 
 const Navbar = () => {
 
@@ -10,7 +11,7 @@ const Navbar = () => {
     return <nav role="navigation" aria-label="Main navigation">
         <div>
             <img src="/images/logo.svg" alt="Portfolio logo"/>
-            <p className="font-bold">Yash's Portfolio</p>
+            <p className="font-bold dark:text-white transition-colors">Yash's Portfolio</p>
             <ul aria-label="Navigation links">
                 {navLinks.map(({id,name,type}) => (
                     <li key={id} onClick={() => openWindow(type)}>
@@ -30,7 +31,9 @@ const Navbar = () => {
                         <img src={img} className="icon-hover" alt={`Status icon ${id}`} />
                     </li>
                 ))}
-
+                <li>
+                    <ThemeToggle />
+                </li>
             </ul>
             <time dateTime={dayjs().toISOString()} role="text" aria-label={`Current time: ${dayjs().format('ddd MMM D h:mm A')}`}>{dayjs().format('ddd MMM D h:mm A')}</time>
         </div>
