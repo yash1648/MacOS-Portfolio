@@ -7,28 +7,32 @@ const Navbar = () => {
 
     const {openWindow}=useWindowsStore()
 
-    return <nav>
+    return <nav role="navigation" aria-label="Main navigation">
         <div>
-            <img src="/images/logo.svg" alt="logo"/>
+            <img src="/images/logo.svg" alt="Portfolio logo"/>
             <p className="font-bold">Yash's Portfolio</p>
-            <ul>
+            <ul aria-label="Navigation links">
                 {navLinks.map(({id,name,type}) => (
                     <li key={id} onClick={() => openWindow(type)}>
-                        <p>{name}</p>
+                        <p role="button" tabIndex={0} onClick={() => openWindow(type)} onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                openWindow(type);
+                            }
+                        }}>{name}</p>
                     </li>
                 ))}
             </ul>
         </div>
         <div>
-            <ul>
+            <ul aria-label="Status icons">
                 {navIcons.map(({ id, img }) => (
                     <li key={id}>
-                        <img src={img} className="icon-hover" alt={`icon-${id}`} />
+                        <img src={img} className="icon-hover" alt={`Status icon ${id}`} />
                     </li>
                 ))}
 
             </ul>
-            <time>{dayjs().format('ddd MMM D h:mm A')}</time>
+            <time dateTime={dayjs().toISOString()} role="text" aria-label={`Current time: ${dayjs().format('ddd MMM D h:mm A')}`}>{dayjs().format('ddd MMM D h:mm A')}</time>
         </div>
     </nav>
 }

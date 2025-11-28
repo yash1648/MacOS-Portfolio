@@ -158,7 +158,7 @@ const socials = [
         text: "Portfolio",
         icon: "/icons/atom.svg",
         bg: "#4bcb63", 
-        link: "https://yash-bagal-port.vercel.app/", // optional: replace after deployment
+        link: "https://yashbagalportfolio.vercel.app/", // optional: replace after deployment
     },
 ];
 
@@ -192,10 +192,10 @@ const photosLinks = [
 ];
 
 const gallery = [
-    // {
-    //     id: 1,
-    //     img: "/images/gal1.png",
-    // },
+    {
+        id: 1,
+        img: "/images/yash-1.png",
+    },
     // {
     //     id: 2,
     //     img: "/images/gal2.png",
@@ -234,7 +234,7 @@ const WORK_LOCATION = {
             name: "Daily Diary AI",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-5",
+            position: "top-5 left-5",
             windowPosition: "top-[5vh] left-5",
             children: [
                 {
@@ -243,7 +243,7 @@ const WORK_LOCATION = {
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 left-10",
+                    position: "top-5 left-5",
                     description: [
                         "Daily Diary AI is an intelligent journaling application designed to help users document their daily thoughts, experiences, and reflections effortlessly.",
                         "You get AI-powered insights, mood tracking, and smart prompts to enrich your journaling experience.",
@@ -258,7 +258,7 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "url",
                     href: "https://github.com/yash1648/Daily-Diary-AI",
-                    position: "top-10 right-20",
+                    position: "top-5 right-5",
                 },
             ],
         },
@@ -269,7 +269,7 @@ const WORK_LOCATION = {
             name: "Library Management System",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-16 left-24",
+            position: "top-5 left-56",
             windowPosition: "top-[12vh] left-10",
             children: [
                 {
@@ -278,7 +278,7 @@ const WORK_LOCATION = {
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 left-10",
+                    position: "top-5 left-5",
                     description: [
                         "A full-featured library system to manage books, members, and transactions.",
                         "Focus on reliability, searchability, and clear role-based access.",
@@ -292,7 +292,7 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "url",
                     href: "https://github.com/yash1648/Library-Management-System",
-                    position: "top-12 right-24",
+                    position: "top-5 right-5",
                 },
             ],
         },
@@ -303,7 +303,7 @@ const WORK_LOCATION = {
             name: "Password Manager",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-52 right-80",
+            position: "top-5 right-5",
             windowPosition: "top-[20vh] left-7",
             children: [
                 {
@@ -312,7 +312,7 @@ const WORK_LOCATION = {
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 right-10",
+                    position: "top-5 left-5",
                     description: [
                         "Password Manager with encryption for security.",
                         "Manage, generate, and store passwords safely with intuitive UI.",
@@ -326,7 +326,7 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "url",
                     href: "https://github.com/jaykumarpatil314-ux/Password-Manager",
-                    position: "top-20 left-20",
+                    position: "top-5 right-5",
                 },
             ],
         },
@@ -337,7 +337,7 @@ const WORK_LOCATION = {
             name: "Personal Assistant",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-80",
+            position: "top-40 left-5",
             windowPosition: "top-[33vh] left-7",
             children: [
                 {
@@ -363,7 +363,7 @@ const WORK_LOCATION = {
             name: "Prep for Interview",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-20 left-40",
+            position: "top-40 left-56",
             windowPosition: "top-[40vh] left-10",
             children: [
                 {
@@ -388,7 +388,7 @@ const WORK_LOCATION = {
             name: "Python File Sorter",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-20 left-70",
+            position: "top-40 right-5",
             windowPosition: "top-[50vh] left-16",
             children: [
                 {
@@ -413,7 +413,7 @@ const WORK_LOCATION = {
             name: "Personal Portfolio",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-36 left-60",
+            position: "top-75 left-5",
             windowPosition: "top-[60vh] left-24",
             children: [
                 {
@@ -438,7 +438,7 @@ const WORK_LOCATION = {
             name: "Food Delivery App",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-80",
+            position: "top-75 left-56",
             windowPosition: "top-[33vh] left-7",
             children: [
                 {
@@ -447,7 +447,7 @@ const WORK_LOCATION = {
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 left-10",
+                    position: "top-5 left-5",
                     description: [
                         "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
                         "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
@@ -462,7 +462,7 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "url",
                     href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-                    position: "top-10 right-20",
+                    position: "top-5 right-5",
                 },
                 {
                     id: 4,
@@ -470,7 +470,7 @@ const WORK_LOCATION = {
                     icon: "/images/image.png",
                     kind: "file",
                     fileType: "img",
-                    position: "top-52 right-80",
+                    position: "top-40 left-5",
                     imageUrl: "/images/project-3.png",
                 },
                 {
@@ -480,7 +480,7 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "fig",
                     href: "https://google.com",
-                    position: "top-60 right-20",
+                    position: "top-40 right-5",
                 },
             ],
         },
@@ -501,8 +501,8 @@ const ABOUT_LOCATION = {
             icon: "/images/image.png",
             kind: "file",
             fileType: "img",
-            position: "top-10 left-5",
-            imageUrl: "/images/yash-1.jpg", // update to your actual image path
+            position: "top-5 left-5",
+            imageUrl: "/images/yash-1.png", // update to your actual image path
         },
         
         {
@@ -511,9 +511,9 @@ const ABOUT_LOCATION = {
             icon: "/images/txt.png",
             kind: "file",
             fileType: "txt",
-            position: "top-60 left-5",
+            position: "top-5 right-5",
             subtitle: "Backend Developer Crafting Reliable Systems",
-            image: "/images/yash-1.jpg", // same as first image for preview
+            image: "/images/yash-1.png", // same as first image for preview
             description: [
                 "Hey! I’m Yash 👋, a backend-focused developer who loves building clean, scalable systems with Java and Spring Boot.",
                 "I specialize in RESTful APIs, microservices, JWT-based authentication, and database design with MySQL and PostgreSQL.",
@@ -551,13 +551,14 @@ const TRASH_LOCATION = {
     icon: "/icons/trash.svg",
     kind: "folder",
     children: [
+      
         {
             id: 1,
             name: "trash1.png",
             icon: "/images/image.png",
             kind: "file",
             fileType: "img",
-            position: "top-10 left-10",
+            position: "top-5 left-5",
             imageUrl: "/images/trash-1.png",
         },
         {
@@ -566,9 +567,19 @@ const TRASH_LOCATION = {
             icon: "/images/image.png",
             kind: "file",
             fileType: "img",
-            position: "top-40 left-80",
+            position: "top-5 left-56",
             imageUrl: "/images/trash-2.png",
         },
+        
+        {
+            id: 5,
+            name: "trash3.png",
+            icon: "/images/image.png",
+            kind: "file",
+            fileType: "img",
+            position: "top-5 right-5",
+            imageUrl: "/images/trash-3.png",
+        }
     ],
 };
 

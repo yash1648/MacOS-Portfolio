@@ -7,7 +7,7 @@ body {
     width: 100dvw;
     overflow: hidden;
     height: 100dvh;
-    background-image: url("/images/wallpaper.png");
+    background-image: url("/images/wallpaper.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -337,7 +337,11 @@ body {
             @apply flex-1 p-8 bg-white max-w-2xl relative;
 
             li {
-                @apply absolute flex items-center flex-col gap-3;
+                @apply absolute flex items-center flex-col gap-3 cursor-grab;
+
+                &.dragging {
+                    @apply scale-105 shadow-xl cursor-grabbing;
+                }
 
                 img {
                     @apply object-contain object-center size-16 relative group-hover:scale-105;
@@ -346,6 +350,10 @@ body {
                 p {
                     @apply text-sm text-center font-medium w-40;
                 }
+            }
+
+            &.drop-target {
+                @apply outline outline-2 outline-blue-300/60;
             }
         }
     }

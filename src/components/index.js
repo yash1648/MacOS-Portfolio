@@ -3,4 +3,5 @@ import Welcome from "#components/Welcome.jsx";
 import Dock from "#components/Dock.jsx";
 import WindowControlls from "#components/WindowControlls.jsx";
 import Home from "#components/Home.jsx";
-export { Navbar, Welcome,Dock,WindowControlls,Home };
+import ErrorBoundary from "#components/ErrorBoundary.jsx";
+export { Navbar, Welcome, Dock, WindowControlls, Home, ErrorBoundary };

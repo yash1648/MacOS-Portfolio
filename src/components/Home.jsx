@@ -28,9 +28,9 @@ const Home = () => {
     return <section id="home">
             <ul>
                 {
-                    projects.map((project)=>{
+                    projects.map((project)=>(
                         <li key={project.id}
-                        className={clsx("group folder",project.windowPosition)}
+                        className={clsx("group folder",project.position)}
                         onClick={()=>handleOpenProjectFinder(project)}
 
                         >
@@ -38,7 +38,7 @@ const Home = () => {
                             <p>{project.name}</p>
                         </li>
 
-                    })
+                    ))
 
                 }
             </ul>
