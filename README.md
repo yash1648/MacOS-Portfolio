@@ -14,7 +14,7 @@
   </p>
 
   <p>
-    <a href="[YOUR_LIVE_DEMO_URL]"><strong>View Live Demo »</strong></a>
+    <a href="https://yashbagalportfolio.vercel.app/"><strong>View Live Demo »</strong></a>
     <br />
     <br />
     <a href="https://github.com/yash1648/macos-portfolio/issues">Report Bug</a>
@@ -138,6 +138,6 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 
 ## 📬 Contact
 
-Yash - [@yash1648](https://twitter.com/yash1648) - [your-email@example.com]
+Yash - [@yash1648](mailto:yashbagal623@gmail.com) - [yashbagal623@gmail.com]
 
 Project Link: [https://github.com/yash1648/macos-portfolio](https://github.com/yash1648/macos-portfolio)
